@@ -1,4 +1,4 @@
-const data = {
+const datas = {
   success: {
     icon: "✓",
     title: "SUCCESS",
@@ -23,7 +23,7 @@ const data = {
 
 const showToast = (type) => {
   let container = document.getElementById("container");
-  let data = data[type];
+  let data = datas[type];
   let toast = document.createElement("div");
   if (container.children.length >= 4) {
     return;
@@ -46,7 +46,7 @@ const showToast = (type) => {
   `;
 
   container.appendChild(toast);
-  let timer = setTimeout(() => remove(toast), 7000);
+  let timer = setTimeout(() => remove(toast), 3000);
   toast._timer = timer;
 };
 
